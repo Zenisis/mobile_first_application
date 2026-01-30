@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kyc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kyc
+  template:
+    metadata:
+      labels:
+        app: kyc
+    spec:
+      containers:
+        - name: kyc
+          image: 249746593559.dkr.ecr.ap-south-1.amazonaws.com/mobile_app/kyc 
+          ports:
+            - containerPort: 3000
