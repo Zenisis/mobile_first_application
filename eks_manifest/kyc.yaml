@@ -15,5 +15,6 @@ spec:
       containers:
         - name: kyc
           image: 249746593559.dkr.ecr.ap-south-1.amazonaws.com/mobile_app/kyc 
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
